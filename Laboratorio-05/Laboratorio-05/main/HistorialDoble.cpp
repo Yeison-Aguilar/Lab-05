@@ -139,6 +139,33 @@ namespace EIF201 {
 		return false;
 	}
 
+	int HistorialDoble::obtenerPosicion(const std::string& cancion) const
+	{
+		NodoHistorial* actual = cabeza;
+		int pos = 0;
+
+		while (actual != nullptr) {
+			if (actual->cancion == cancion) {
+				return pos;
+			}
+			actual = actual->siguiente;
+			return -1;
+		}
+	}
+
+	std::string HistorialDoble::obtenerEnPosicion(int pos) const
+	{
+		if (pos < 0 || pos >= cantidad) {
+			return "";
+		}
+
+		NodoHistorial* actual = cabeza;
+		for (int i = 0; i < pos; i++) {
+			actual = actual->siguiente;
+		}
+		return actual->cancion;
+	}
+
 	int HistorialDoble::obtenerPosicionDesdeElFinal(const std::string& cancion) const {
 
 		NodoHistorial* actual = cola;

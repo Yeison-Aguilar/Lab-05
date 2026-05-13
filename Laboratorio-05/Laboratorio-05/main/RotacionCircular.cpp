@@ -72,6 +72,10 @@ namespace EIF201 {
 		} while (actual != cabeza);
 		return false;
 	}
+	bool RotacionCircular::existeLocutor(const string& nombre) const
+	{
+		return false;
+	}
 	int RotacionCircular::obtenerPosicion(const string& nombre) const {
 		if (cola == nullptr) { return -1; }
 		NodoLocutor* cabeza = getCabeza();
@@ -130,6 +134,7 @@ namespace EIF201 {
 		if (cola == nullptr) { return ""; }
 		cola = cola->siguiente; // rotar: la cola avanza, por lo que la cabeza cambia
 		return getCabeza()->nombre;
+		
 	}
 	void RotacionCircular::simularTurnos(int n) {
 		if (cola == nullptr) { cout << "Sin locutores en rotacion." << endl; return; }
