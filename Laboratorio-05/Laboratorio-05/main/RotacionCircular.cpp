@@ -132,7 +132,7 @@ namespace EIF201 {
 		return getCabeza()->nombre;
 	}
 	void RotacionCircular::simularTurnos(int n) {
-		if (cola == nullptr) { cout << "Sin locutores en rotacion." << < endl; return; }
+		if (cola == nullptr) { cout << "Sin locutores en rotacion." << endl; return; }
 		for (int i = 1; i <= n; i++) {
 			cout << "Turno " << i << ": " << siguiente() << endl;
 		}
