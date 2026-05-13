@@ -41,8 +41,8 @@ namespace EIF201 {
 		bool eliminarCola();
 
 		//Recorrido
-		void imprimirCronologico(); //Cabeza -> cola
-		void imprimirInverso(); // Cola -> cabeza
+		void imprimirCronologico() const; //Cabeza -> cola
+		void imprimirInverso() const; // Cola -> cabeza
 
 		int getCantidad() const;
 		bool estaVacia() const;

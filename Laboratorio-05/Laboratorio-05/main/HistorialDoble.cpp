@@ -226,5 +226,53 @@ namespace EIF201 {
 		cantidad--;
 		return true;
 	}
+
+	bool HistorialDoble::eliminarCabeza()
+	{
+		if (cabeza == nullptr) { return false; }
+		return eliminarPrimera(cabeza->cancion);
+	}
+
+	bool HistorialDoble::eliminarCola()
+	{
+		if (cola == nullptr) { return false; }
+		return eliminarPrimera(cola->cancion);
+	}
+
+	void HistorialDoble::imprimirCronologico() const
+	{
+		NodoHistorial* actual = cabeza;
+		std::cout << "Cronologico: ";
+		while (actual != nullptr) {
+			std::cout << actual->cancion;
+			if (actual->siguiente != nullptr) { std::cout << " <->";}
+			actual = actual->siguiente;
+		}
+		std::cout << std::endl;
+	}
+
+	void HistorialDoble::imprimirInverso() const
+	{
+		NodoHistorial* actual = cola;
+		std::cout << "Inverso: ";
+
+		while (actual != nullptr) {
+			std::cout << actual->cancion;
+			if (actual->anterior != nullptr) std::cout << "<->";
+			actual = actual->anterior;
+		}
+		
+		std::cout<< std::endl;
+	}
+
+	int HistorialDoble::getCantidad() const
+	{
+		return cantidad;
+	}
+
+	bool HistorialDoble::estaVacia() const
+	{
+		return cabeza == nullptr;
+	}
 	
 }
