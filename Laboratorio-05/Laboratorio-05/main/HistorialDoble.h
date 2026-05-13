@@ -15,7 +15,7 @@ namespace EIF201 {
 
 	public:
 		HistorialDoble();
-		HistorialDoble();
+		~HistorialDoble();
 
 		void insertarAlInicio(const std::string& cancion);
 		void insertarAlFinal(const std::string& cancion);
