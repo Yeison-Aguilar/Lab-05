@@ -4,7 +4,7 @@ namespace EIF201 {
 
 	HistorialDoble::HistorialDoble() : cabeza(nullptr), cola(nullptr), cantidad(0) {}
 
-	HistorialDoble::HistorialDoble() {
+	HistorialDoble::~HistorialDoble() {
 
 		NodoHistorial* actual = cabeza;
 
