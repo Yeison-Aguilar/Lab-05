@@ -189,7 +189,16 @@ namespace EIF201 {
 	}
 	string RotacionCircular::locutorMasActivo() const
 	{
-		return string();
+		if (cola == nullptr) { return""; }
+		NodoLocutor* cabeza = getCabeza();
+		NodoLocutor* actual = cabeza;
+		NodoLocutor* masactivo = cabeza;
+		do {
+			if (actual->turnosAsignados > masactivo->turnosAsignados) { masactivo = actual; }
+
+			actual = actual->siguiente;
+		} while (actual != cabeza);
+		return masactivo->nombre;
 	}
 	int RotacionCircular::getCantidad() const { return cantidad; }
 	bool RotacionCircular::estavacia() const { return cola == nullptr; }
