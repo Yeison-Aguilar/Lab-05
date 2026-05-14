@@ -1,4 +1,5 @@
 #include "RotacionCircular.h"
+#include "HistorialDoble.h"
 namespace EIF201 {
 	RotacionCircular::RotacionCircular()
 		: cola(nullptr), cantidad(0) {
@@ -64,7 +65,7 @@ namespace EIF201 {
 				NodoLocutor* nuevo = new NodoLocutor(nuevo_nombre);
 				nuevo->siguiente = actual->siguiente;
 				actual->siguiente = nuevo;
-				if (actual = cola) cola = nuevo; // si era la cola, el nuevo es la nueva cola
+				if (actual == cola) cola = nuevo; // si era la cola, el nuevo es la nueva cola
 				cantidad++;
 				return true;
 			}
@@ -74,6 +75,16 @@ namespace EIF201 {
 	}
 	bool RotacionCircular::existeLocutor(const string& nombre) const
 	{
+		if (cola == nullptr) { return false; }
+
+		NodoLocutor* cabeza = getCabeza();
+
+
+		NodoLocutor* actual = cabeza;
+		do {
+			if (actual->nombre == nombre) { return true; }
+			actual = actual->siguiente;
+		} while (actual != cabeza);
 		return false;
 	}
 	int RotacionCircular::obtenerPosicion(const string& nombre) const {
@@ -106,9 +117,9 @@ namespace EIF201 {
 					cola = nullptr;
 				}
 				else {
-					previo->siguiente == actual->siguiente;
+					previo->siguiente = actual->siguiente;
 					// saltar al actual
-					if (actual = cola) cola = previo;
+					if (actual == cola) cola = previo;
 					// si era la cola, actualizar
 				}
 				delete actual;
