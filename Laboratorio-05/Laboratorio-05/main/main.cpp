@@ -55,6 +55,8 @@ int main() {
 		cout << "Turno actual: " << r.turnoActual() << endl; // Diego
 		// Rotación
 		r.simularTurnos(7);
+		r.imprimirEstadisticas();
+		cout << "Locutor mas activo: " << r.locutorMasActivo() << endl;
 		// Esperado: Maria, Carlos, Elena, Adriana, Diego, Maria, Carlos
 		// Eliminación
 		r.eliminarLocutor("Carlos");
