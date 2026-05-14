@@ -11,9 +11,9 @@ namespace EIF201 {
 		int turnosAsignados;
 
 		NodoLocutor(const string& n)
-			: nombre(n), siguiente(nullptr) {
+			: nombre(n), siguiente(nullptr), turnosAsignados(0){
 			cout << "[NodoLocutor creado: "<< n << "]" << endl; 
-			turnosAsignados = 0;
+			
 		}
 		~NodoLocutor() {
 			cout << "[NodoLocutor destruido: "<< nombre << "]" << endl;
