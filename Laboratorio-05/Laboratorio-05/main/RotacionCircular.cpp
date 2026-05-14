@@ -170,6 +170,22 @@ namespace EIF201 {
 	void RotacionCircular::imprimirEstadisticas() const
 	{
 
+		if (cola == nullptr) {
+			std::cout << "No hay locutores en la rotacion" << std::endl;
+			return;
+		}
+
+		NodoLocutor* cabeza = getCabeza();
+		NodoLocutor* actual = cabeza;
+
+		std::cout << "Estadisticas" << std::endl;
+		do {
+
+			std::cout << "Locutor: " << actual->nombre << "Turnos: asignados: " << actual->turnosAsignados << std::endl;
+			actual = actual->siguiente;
+
+		} while (actual != cabeza);
+
 	}
 	string RotacionCircular::locutorMasActivo() const
 	{

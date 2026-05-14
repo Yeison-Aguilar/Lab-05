@@ -4,7 +4,7 @@ using namespace EIF201;
 
 int main() {
 	// MÓDULO A — HistorialDoble
-	cout << "\nMODULO A: HistorialDobl" << endl;
+	cout << "\nMODULO A: HistorialDoble" << endl;
 	{
 		HistorialDoble h;
 		// Inserción
