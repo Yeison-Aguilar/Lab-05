@@ -149,8 +149,9 @@ namespace EIF201 {
 				return pos;
 			}
 			actual = actual->siguiente;
-			return -1;
+			pos++;
 		}
+		return -1;
 	}
 
 	std::string HistorialDoble::obtenerEnPosicion(int pos) const
@@ -202,6 +203,7 @@ namespace EIF201 {
 
 				delete actual;
 				actual = nullptr;
+				cantidad--;
 				return true;
 			}
 			actual = actual->siguiente;
