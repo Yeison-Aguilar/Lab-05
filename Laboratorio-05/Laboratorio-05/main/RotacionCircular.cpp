@@ -81,6 +81,7 @@ namespace EIF201 {
 
 
 		NodoLocutor* actual = cabeza;
+
 		do {
 			if (actual->nombre == nombre) { return true; }
 			actual = actual->siguiente;
