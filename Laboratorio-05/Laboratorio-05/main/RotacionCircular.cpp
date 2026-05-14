@@ -95,7 +95,7 @@ namespace EIF201 {
 
 	}
 	bool RotacionCircular::eliminarLocutor(const string& nombre) {
-		if (cola = nullptr) { return false; }
+		if (cola == nullptr) { return false; }
 		NodoLocutor* cabeza = getCabeza();
 		NodoLocutor* actual = cabeza;
 		NodoLocutor* previo = cola; // el recorrido circular comienza con previo = cola
