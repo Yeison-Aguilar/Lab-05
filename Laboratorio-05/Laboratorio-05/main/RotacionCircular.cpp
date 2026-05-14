@@ -144,6 +144,7 @@ namespace EIF201 {
 	string RotacionCircular::siguiente() {
 		if (cola == nullptr) { return ""; }
 		cola = cola->siguiente; // rotar: la cola avanza, por lo que la cabeza cambia
+		getCabeza()->turnosAsignados++;
 		return getCabeza()->nombre;
 		
 	}
@@ -164,6 +165,14 @@ namespace EIF201 {
 			if (actual != cabeza) { cout << " -> "; }
 		} while (actual != cabeza);
 		cout <<" -> (inicio)" << endl;
+	}
+	void RotacionCircular::imprimirEstadisticas() const
+	{
+
+	}
+	string RotacionCircular::locutorMasActivo() const
+	{
+		return string();
 	}
 	int RotacionCircular::getCantidad() const { return cantidad; }
 	bool RotacionCircular::estavacia() const { return cola == nullptr; }
