@@ -5,7 +5,7 @@
 
 using namespace EIF201;
 
-// Método que implementa un menú interactivo para operar la bitácora
+
 void ejecutarMenu()
 {
     std::string ruta;
@@ -27,7 +27,7 @@ void ejecutarMenu()
 
         int opcion = 0;
         if (!(std::cin >> opcion)) {
-            // limpiar estado y continuar
+            
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Opcion invalida. Intente de nuevo.\n";
@@ -60,13 +60,13 @@ void ejecutarMenu()
             }
 
         } else if (opcion == 2) {
-            // Liberar lista anterior antes de cargar
+            
             bit.lieberarlista(cabeza);
             int n = bit.cargartodas(cabeza);
             std::cout << n << " aves cargadas (todas).\n";
 
         } else if (opcion == 3) {
-            // Liberar lista anterior antes de cargar
+            
             bit.lieberarlista(cabeza);
             int n = bit.cargasvalidas(cabeza);
             std::cout << n << " aves validas cargadas.\n";
