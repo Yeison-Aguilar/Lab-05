@@ -12,7 +12,7 @@ namespace EIF201 {
      private:
 	 void imprimirInversoAux(NodoAve* cab) const;
 
-	 NodoAve* maxAux(NodoAve* cab, NodoAve mejor) const;
+	 NodoAve* maxAux(NodoAve* cab, NodoAve* mejor) const;
 
    public:
 	   

@@ -23,9 +23,19 @@ void AnalisisAves::imprimirInversoAux(NodoAve* cab) const
 	
 }
 
-NodoAve* AnalisisAves::maxAux(NodoAve* cab, NodoAve mejor) const
+NodoAve* AnalisisAves::maxAux(NodoAve* cab, NodoAve* mejor) const
 {
-	return nullptr;
+	if (cab == nullptr){
+
+		return mejor;
+	}
+
+	if (mejor == nullptr || cab->peso > mejor->peso){
+
+		mejor = cab;
+	}
+
+	return maxAux(cab->siguiente, mejor);
 }
 
 int AnalisisAves::contar(NodoAve * cab) const
