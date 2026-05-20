@@ -10,7 +10,7 @@ namespace EIF201 {
    class AnalisisAves{
 
      private:
-	 void imprimirIversoAux(NodoAve* cab) const;
+	 void imprimirInversoAux(NodoAve* cab) const;
 
 	 NodoAve* maxAux(NodoAve* cab, NodoAve mejor) const;
 
@@ -22,7 +22,7 @@ namespace EIF201 {
 	   double sumaPesos(NodoAve* cab) const;
 	   int contarEspecie(NodoAve* cab, const std::string& especie) const;
 	   bool existeEspecie(NodoAve* cab, const std::string& especie) const;
-	   NodoAve* aveMasPesada(NodoAve* cab) const;
+	   NodoAve* aveMasPesada(NodoAve* cab, NodoAve* mejor) const;
 	   void imprimirCronologico(NodoAve* cab) const;
 	   void imprimirInverso(NodoAve* cab) const;
 
